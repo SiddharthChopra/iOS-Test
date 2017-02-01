@@ -11,12 +11,11 @@ import ObjectMapper
 
 class Addres : NSObject, NSCoding, Mappable{
 
-	var city : String?
-	var geo : Geo?
-	var street : String?
-	var suite : String?
-	var zipcode : String?
-
+	var city: String?
+	var geo: Geo?
+	var street: String?
+	var suite: String?
+	var zipcode: String?
 
 	class func newInstance(map: Map) -> Mappable?{
 		return Addres()
@@ -24,8 +23,7 @@ class Addres : NSObject, NSCoding, Mappable{
 	required init?(map: Map){}
 	private override init(){}
 
-	func mapping(map: Map)
-	{
+	func mapping(map: Map) {
 		city <- map["city"]
 		geo <- map["geo"]
 		street <- map["street"]
