@@ -1,4 +1,3 @@
-
 import ObjectMapper
 import Foundation
 
@@ -8,16 +7,16 @@ class ProvincesWrapper: NSObject, Mappable {
     var title: String?
     var body: String?
     // MARK: - object mapping
-    
+
     required init?(map: Map) {
-        
+
     }
-    
+
     func mapping(map: Map) {
         userId      <- map["userId"]
         identifier  <- map["id"]
         title       <- map["title"]
         body        <- map["body"]
     }
-    
+
 }

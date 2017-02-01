@@ -34,5 +34,5 @@ struct StringToDoubleTransformer: TransformType {
         }
         return nil
     }
-    
+
 }

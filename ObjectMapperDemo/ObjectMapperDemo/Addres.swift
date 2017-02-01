@@ -16,11 +16,12 @@ class Addres: NSObject, NSCoding, Mappable {
 	var suite: String?
 	var zipcode: String?
 
-	class func newInstance(map: Map) -> Mappable?{
+	class func newInstance(map: Map) -> Mappable? {
 		return Addres()
 	}
-	required init?(map: Map){}
-	private override init(){}
+
+	required init?(map: Map) {}
+	private override init() {}
 
 	func mapping(map: Map) {
 		city <- map["city"]
@@ -28,7 +29,6 @@ class Addres: NSObject, NSCoding, Mappable {
 		street <- map["street"]
 		suite <- map["suite"]
 		zipcode <- map["zipcode"]
-		
 	}
 
     /**
@@ -41,7 +41,6 @@ class Addres: NSObject, NSCoding, Mappable {
          street = aDecoder.decodeObject(forKey: "street") as? String
          suite = aDecoder.decodeObject(forKey: "suite") as? String
          zipcode = aDecoder.decodeObject(forKey: "zipcode") as? String
-
 	}
 
     /**
@@ -49,22 +48,21 @@ class Addres: NSObject, NSCoding, Mappable {
     * Encodes mode properties into the decoder
     */
     @objc func encode(with aCoder: NSCoder) {
-		if city != nil{
+		if city != nil {
 			aCoder.encode(city, forKey: "city")
 		}
-		if geo != nil{
+		if geo != nil {
 			aCoder.encode(geo, forKey: "geo")
 		}
-		if street != nil{
+		if street != nil {
 			aCoder.encode(street, forKey: "street")
 		}
-		if suite != nil{
+		if suite != nil {
 			aCoder.encode(suite, forKey: "suite")
 		}
-		if zipcode != nil{
+		if zipcode != nil {
 			aCoder.encode(zipcode, forKey: "zipcode")
 		}
-
 	}
 
 }

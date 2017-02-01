@@ -37,5 +37,5 @@ public class StringToIntTransformer: TransformType {
         }
         return nil
     }
-}
 
+}

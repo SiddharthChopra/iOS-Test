@@ -15,13 +15,13 @@ class UserSwift: NSObject, Mappable {
     var name: String?
     var username: String?
     var email: String?
-    var address: addressSwift?
+    var address: AddressSwift?
     var phone: String?
     var website: String?
     // MARK: - object mapping
 
     required init?(map: Map) {
-        
+
     }
 
     func mapping(map: Map) {
@@ -36,7 +36,7 @@ class UserSwift: NSObject, Mappable {
 
 }
 
-class addressSwift: NSObject, Mappable {
+class AddressSwift: NSObject, Mappable {
 
     var street: String?
     var suite: String?
@@ -45,7 +45,7 @@ class addressSwift: NSObject, Mappable {
     var lat: Float = 0
     var lng: Float = 0
     // MARK: - object mapping
-    var asd:String?
+    var asd: String?
 
     let transform = TransformOf<Float, String>(fromJSON: { (value: String?) -> Float? in
         // transform value from String? to Int?
