@@ -139,6 +139,7 @@
 				0C795FD91E12726D00D32323 /* Resources */,
 				E9A7B6C1764085E4527C8D7A /* [CP] Embed Pods Frameworks */,
 				8330944E806DDCEE7EA007E1 /* [CP] Copy Pods Resources */,
+				CC0485961E41FA6700F54461 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -228,6 +229,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapperDemo/Pods-ObjectMapperDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CC0485961E41FA6700F54461 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\ntailor\nelse\necho \"warning: Please install tailor from https://tailor.sh\"\nfi";
 		};
 		E9A7B6C1764085E4527C8D7A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -397,7 +411,7 @@
 				);
 				INFOPLIST_FILE = ObjectMapperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.ObjectMapperDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kahuna.ObjectMapperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ObjectMapperDemo/ObjectMapperDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -419,7 +433,7 @@
 				);
 				INFOPLIST_FILE = ObjectMapperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.ObjectMapperDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kahuna.ObjectMapperDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ObjectMapperDemo/ObjectMapperDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

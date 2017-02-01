@@ -37,4 +37,5 @@ public class StringToFloatTransformer: TransformType {
         }
         return nil
     }
+
 }
