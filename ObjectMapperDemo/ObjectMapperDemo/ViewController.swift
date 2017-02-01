@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func getMethod() {
+        //To get more detail information
+    }
+
     func getPost() {
         let shared = ServerAPI()
         shared.invokeHTTPRequestGET("https://jsonplaceholder.typicode.com/users", withToken: false, token: "", withSucessBlock: {

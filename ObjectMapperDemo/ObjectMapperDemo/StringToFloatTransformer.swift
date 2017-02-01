@@ -15,21 +15,22 @@ public class StringToFloatTransformer: TransformType {
     convenience init(dateFormat: String) {
         self.init()
     }
-    
+
     public func transformFromJSON(_ value: Any?) -> Object? {
         if let val = value as? String {
             return Float(val)
         }
-        
+
         if let val = value as? Float {
             return val
         }
-        
+
         if let val = value as? Int {
             return Float(val)
         }
         return nil
     }
+
     public func transformToJSON(_ value: Float?) -> JSON? {
         if value != nil {
             return value as StringToFloatTransformer.JSON?
