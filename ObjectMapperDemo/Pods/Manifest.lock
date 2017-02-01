@@ -1,0 +1,15 @@
+PODS:
+  - Dollar (6.1.0)
+  - ObjectMapper (2.2.2)
+
+DEPENDENCIES:
+  - Dollar (~> 6.1.0)
+  - ObjectMapper (~> 2.2)
+
+SPEC CHECKSUMS:
+  Dollar: 0a9883680f2c1104adf0d19b827c3be71d3e3121
+  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+
+PODFILE CHECKSUM: 5c71fc4d303eac70cd99ee946536cf6a57d78f78
+
+COCOAPODS: 1.2.0
