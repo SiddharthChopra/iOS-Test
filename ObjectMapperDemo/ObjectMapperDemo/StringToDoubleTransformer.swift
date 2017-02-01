@@ -12,21 +12,22 @@ struct StringToDoubleTransformer: TransformType {
 
     public typealias Object = Double
     public typealias JSON = AnyObject
-    
+
     public func transformFromJSON(_ value: Any?) -> Object? {
         if let val = value as? String {
             return Double(val)
         }
-        
+
         if let val = value as? Double {
             return val
         }
-        
+
         if let val = value as? Double {
             return Double(val)
         }
         return nil
     }
+
     public func transformToJSON(_ value: Double?) -> JSON? {
         if value != nil {
             return value as StringToDoubleTransformer.JSON?
